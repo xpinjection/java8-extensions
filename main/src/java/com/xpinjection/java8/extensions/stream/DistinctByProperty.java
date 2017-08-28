@@ -12,7 +12,7 @@ import java.util.Set;
 
 import static java.util.stream.Collectors.toList;
 
-public class Filtering {
+public class DistinctByProperty {
     @Ugly
     List<Person> filterByName(List<Person> people) {
         Set<String> names = new HashSet<>();
