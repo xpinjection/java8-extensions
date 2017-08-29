@@ -47,7 +47,7 @@ public class RankedItems {
     }
 
     @Good
-    void rankByNaturalOrderStreamEx(String... words) {
+    void rankByNaturalOrderWithStreamEx(String... words) {
         StreamEx.of(words)
                 .sorted()
                 .zipWith(IntStream.range(0, words.length).boxed())
