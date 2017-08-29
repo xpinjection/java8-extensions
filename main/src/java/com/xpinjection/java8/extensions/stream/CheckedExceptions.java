@@ -27,7 +27,7 @@ public class CheckedExceptions {
     void printFilesInDirWithJool(File dir) {
         Arrays.stream(dir.listFiles())
                 .map(Unchecked.function(File::getCanonicalPath,
-                        e -> new IllegalStateException("Can't access file", e)))
+                        e -> { throw new IllegalStateException("Can't access file", e); }))
                 .forEach(System.out::println);
     }
 
